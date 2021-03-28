@@ -1,5 +1,5 @@
 oldList = []
-
+# damn
 def listNew():
     global oldList
     while True:
