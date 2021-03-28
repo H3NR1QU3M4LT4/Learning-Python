@@ -1,3 +1,5 @@
+import re
+
 def isPhoneNumber(text):
     if len(text)!=12:
         return False
@@ -35,3 +37,9 @@ for i in range(len(message)):
     if isPhoneNumber(chunk):
         print('Phone Number found:' + chunk)
 print('Done')
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phoneNumRegex.search(message)
+mof = phoneNumRegex.findall(message)
+print('REGEX: Phone Number found:' + mo.group()) #apenas retorna o primeiro
+print('REGEX: Phone Number found:' + str(mof))
