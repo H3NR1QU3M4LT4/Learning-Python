@@ -13,4 +13,15 @@ agentNameRegex.sub(r'\1****', 'Agent Alice who is dumb and Agent Bob fucked Agen
 
 #página 207 apagar
 # ? DAMN
+phoneRegex = re.compile(r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4}(\s*(ext|x|ext.)\s*\d{2,5})?)')
+#or
+phoneRegex = re.compile(r'''(
+    (\d{3}|\(\d{3}\))? # código de área
+    (\s|-|\.)? # separador
+    \d{3} # primeiros 3 dígitos
+    (\s|-|\.) # separador
+    \d{4} # últimos 4 dígitos
+    (\s*(ext|x|ext.)\s*\d{2,5})? # extensão
+    )''', re.VERBOSE)
 
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
