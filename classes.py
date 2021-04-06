@@ -4,6 +4,7 @@ import time
 import pyautogui
 import pandas as pd
 from datetime import datetime
+from selenium import 
 
 zoom = 'C:\\Users\\Henrique Malta\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe'
 linksbct = 'https://videoconf-colibri.zoom.us/j/84503647996?pwd=dENoYlNTRGtubDJMaTltemRzWWhxdz09#success'
